@@ -196,7 +196,7 @@ def default_detection_configs():
 
   h.skip_crowd_during_training = True
   h.label_map = None  # a dict or a string of 'coco', 'voc', 'waymo'.
-  h.max_instances_per_image = 100  # Default to 100 for COCO.
+  h.max_instances_per_image = 400  # Default to 100 for COCO.
   h.regenerate_source_id = False
 
   # model architecture
@@ -263,9 +263,9 @@ def default_detection_configs():
       'sigma': None,
       'pyfunc': False,
       'max_nms_inputs': 0,
-      'max_output_size': 100,
+      'max_output_size': 400,
   }
-  h.tflite_max_detections = 100
+  h.tflite_max_detections = 400
 
   # version.
   h.fpn_name = None
